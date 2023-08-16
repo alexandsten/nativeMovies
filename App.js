@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 
 
 import { NavigationContainer } from '@react-navigation/native';
+import 'react-native-gesture-handler';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import Navigation from './components/Navigation';
 import HeaderComp from './components/HeaderComp';
 import FooterComp from './components/FooterComp';
