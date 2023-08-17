@@ -12,7 +12,7 @@ export default function Navigation() {
   const Stack = createStackNavigator();
 
   return (
-    <NavigationContainer>
+   
       
       <Stack.Navigator screenOptions={{
         headerStyle: {
@@ -35,7 +35,7 @@ export default function Navigation() {
         }}/>
     
       </Stack.Navigator>
-    </NavigationContainer>
+   
     
   )
 }

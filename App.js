@@ -8,13 +8,17 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Navigation from './components/Navigation';
 import HeaderComp from './components/HeaderComp';
 import FooterComp from './components/FooterComp';
+import DrawerNav from './components/DrawerNav';
 
 
 export default function App() {
   return (
     <>
       <HeaderComp />
-      <Navigation />
+      <NavigationContainer>
+          <DrawerNav />
+      </NavigationContainer>
+      
       <View style={styles.container}>
      
         <Text>Open up App.js to start working on your app!</Text>
