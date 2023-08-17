@@ -24,7 +24,7 @@ const KnappComp = ({item, navigation}) => {
             
         <TextInput 
                 
-                value={item.task}
+                value={item.Title}
                
             />
         </View>

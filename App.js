@@ -10,6 +10,7 @@ import HeaderComp from './components/HeaderComp';
 import FooterComp from './components/FooterComp';
 import DrawerNav from './components/DrawerNav';
 import BottomDrawer from './components/BottomDrawer';
+import MovieAPI from './components/MovieAPI';
 
 
 export default function App() {
@@ -23,11 +24,12 @@ export default function App() {
      
         
         <StatusBar style="auto" />
-      
+       <MovieAPI />
       </View>
       <NavigationContainer>
           <BottomDrawer />
       </NavigationContainer>
+     
      <FooterComp />
     </>
   );
