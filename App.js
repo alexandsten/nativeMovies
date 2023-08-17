@@ -9,14 +9,16 @@ import Navigation from './components/Navigation';
 import HeaderComp from './components/HeaderComp';
 import FooterComp from './components/FooterComp';
 import DrawerNav from './components/DrawerNav';
+import BottomDrawer from './components/BottomDrawer';
 
 
 export default function App() {
   return (
     <>
       <HeaderComp />
+      
       <NavigationContainer>
-          <DrawerNav />
+          <BottomDrawer />
       </NavigationContainer>
       
       <View style={styles.container}>
