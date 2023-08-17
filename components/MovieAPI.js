@@ -2,7 +2,7 @@ import React from 'react'
 
 
 import { useState, useEffect } from 'react'
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
 
 export default function MovieAPI() {
 
@@ -32,7 +32,8 @@ export default function MovieAPI() {
         getMovies();
       }, []);
   return (
-    <View>
+    <View style={styles.list}>
+        <Text>Listan ska vara här</Text>
          <FlatList  
                 data={movieItems}
                 keyExtractor={item => item.imdbID}
@@ -45,4 +46,13 @@ export default function MovieAPI() {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+    list: {
+      flex: 1,
+      backgroundColor: '#fdeca6',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  });
 
