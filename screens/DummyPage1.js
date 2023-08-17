@@ -5,12 +5,13 @@ import MovieAPI from '../components/MovieAPI';
 export default function DummyPage1({navigation}) {
   return (
     <View>
-      <MovieAPI />
+      
       <Text>Dummy page 1 - vill ha list med filmer här</Text>
       <Button
         title="Open dummy page 2"
         onPress={() => navigation.navigate('Dummy page 2')}
       />
+      <MovieAPI />
     </View>
   )
 }

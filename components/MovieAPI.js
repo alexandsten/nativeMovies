@@ -3,6 +3,7 @@ import React from 'react'
 
 import { useState, useEffect } from 'react'
 import { View, Text, FlatList, StyleSheet } from 'react-native';
+import KnappComp from './KnappComp';
 
 export default function MovieAPI() {
 
@@ -21,7 +22,7 @@ export default function MovieAPI() {
          const movieApi= await response.json();
          
           setmovieResponse(movieApi.Search)
-          console.log(movieApi)
+          console.log("filmer")
         } catch (error) {
           console.log(error);
           setError("An error occurred while fetching the data");
@@ -32,14 +33,15 @@ export default function MovieAPI() {
         getMovies();
       }, []);
   return (
-    <View style={styles.list}>
+    <View >
         <Text>Listan ska vara här</Text>
          <FlatList  
-                data={movieItems}
+                data={movieResponse}
                 keyExtractor={item => item.imdbID}
                 renderItem={({item}) => ( 
                                  
                   <KnappComp  item={item} />
+                  
                
                 )}
             />

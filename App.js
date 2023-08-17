@@ -24,7 +24,7 @@ export default function App() {
      
         
         <StatusBar style="auto" />
-       <MovieAPI />
+       
       </View>
       <NavigationContainer>
           <BottomDrawer />
