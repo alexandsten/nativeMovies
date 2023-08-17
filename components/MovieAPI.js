@@ -2,10 +2,10 @@ import React from 'react'
 
 
 import { useState, useEffect } from 'react'
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Image } from 'react-native';
 import KnappComp from './KnappComp';
 
-export default function MovieAPI() {
+export default function MovieAPI({navigation}) {
 
     
 
@@ -40,7 +40,7 @@ export default function MovieAPI() {
                 keyExtractor={item => item.imdbID}
                 renderItem={({item}) => ( 
                                  
-                  <KnappComp  item={item} />
+                  <KnappComp navigation={navigation} item={item} />
                   
                
                 )}

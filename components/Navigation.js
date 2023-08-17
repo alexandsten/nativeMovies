@@ -6,6 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import MoviePage from '../screens/MoviePage';
 import MoviePage2 from '../screens/MoviePage2';
+import MovieAPI from './MovieAPI';
+
 
 export default function Navigation() {
 
@@ -15,6 +17,7 @@ export default function Navigation() {
    
       
       <Stack.Navigator screenOptions={{
+        
         headerStyle: {
           backgroundColor: '#f4511e',
         },
@@ -33,6 +36,20 @@ export default function Navigation() {
           headerShown: false,
     
         }}/>
+
+        <Stack.Screen name="Button" component={KnappComp} options={{
+          title: 'Hej - movie page',
+          headerShown: false,
+    
+        }}/>
+
+          <Stack.Screen name="Movie-API" component={MovieAPI} options={{
+          title: 'Hej - movie page',
+          headerShown: false,
+    
+        }}/>
+
+       
     
       </Stack.Navigator>
    
