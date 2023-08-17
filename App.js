@@ -17,16 +17,17 @@ export default function App() {
     <>
       <HeaderComp />
       
-      <NavigationContainer>
-          <BottomDrawer />
-      </NavigationContainer>
       
-      <View style={styles.container}>
+      
+      <View >
      
-        <Text>Open up App.js to start working on your app!</Text>
+        
         <StatusBar style="auto" />
       
       </View>
+      <NavigationContainer>
+          <BottomDrawer />
+      </NavigationContainer>
      <FooterComp />
     </>
   );
