@@ -15,7 +15,7 @@ export default function Navigation() {
 
   return (
    
-      
+      <>
       <Stack.Navigator screenOptions={{
         
         headerStyle: {
@@ -52,7 +52,8 @@ export default function Navigation() {
        
     
       </Stack.Navigator>
-   
-    
+        
+       
+      </>
   )
 }

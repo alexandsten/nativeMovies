@@ -2,7 +2,7 @@ import React from 'react'
 
 
 import { useState, useEffect } from 'react'
-import { View, Text, FlatList, StyleSheet, Image } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Image,Button } from 'react-native';
 import KnappComp from './KnappComp';
 
 export default function MovieAPI({navigation}) {
@@ -34,17 +34,14 @@ export default function MovieAPI({navigation}) {
       }, []);
   return (
     <View >
-        <Text>Listan ska vara här</Text>
-         <FlatList  
-                data={movieResponse}
-                keyExtractor={item => item.imdbID}
-                renderItem={({item}) => ( 
-                                 
-                  <KnappComp navigation={navigation} item={item} />
-                  
-               
-                )}
-            />
+        <Text>Movie API</Text>
+        <FlatList  
+        data={movieResponse}
+        keyExtractor={item => item.imdbID}
+        renderItem={({item}) => ( 
+         <KnappComp  item={item} />
+  )}
+/>
     </View>
   )
 }

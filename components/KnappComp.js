@@ -3,43 +3,36 @@ import { StyleSheet, Text, View, TouchableOpacity, FlatList, TextInput, Button, 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createStackNavigator } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
+
 import MoviePage from '../screens/MoviePage';
 
 
 
-const KnappComp = ({item, navigation}) => {
+const KnappComp = ({ item }) => {
+  const navigation = useNavigation();
 
   const buttonClick = () => {
-    console.log("hello world")
-}
-
-
-
-
+    console.log("hello world");
+  };
 
   return (
     <View style={styles.container}>
-    
-      <TouchableOpacity onPress={() => buttonClick() }>
+      <TouchableOpacity onPress={() => buttonClick()}>
         <View style={styles.button}>
-            
-        <TextInput value={item.Title} />
-         
+          <TextInput value={item.Title} />
         </View>
-       
       </TouchableOpacity>
-      
-     
+
       <Button
-        title="Movie page"
-        onPress={() => navigation.navigate('Movie-page')}
-      />
+      title="Movie page"
+     onPress={() => navigation.navigate('Movie-page2', { item })}
+/>
 
       <Image style={styles.logo} source={{ uri: item.Poster }} />
     </View>
-  )
-}
-
+  );
+};
 export default KnappComp
 
 const styles = StyleSheet.create({
