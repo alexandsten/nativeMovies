@@ -9,6 +9,7 @@ export default function DummyPage2({navigation}) {
         title="Open dummy page 1"
         onPress={() => navigation.navigate('Dummy page 1')}
       />
+       <Text>Vet ej vad som ska var här</Text>
     </View>
   )
 }

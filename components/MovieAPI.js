@@ -17,7 +17,7 @@ export default function MovieAPI({navigation}) {
         try {
       
           const response =  await fetch(
-            `https://www.omdbapi.com/?i=tt3896198&apikey=21adb06f&s=batman&type=movie`
+            `https://www.omdbapi.com/?apikey=21adb06f&s=batman`
           );
          const movieApi= await response.json();
          
