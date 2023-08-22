@@ -8,7 +8,7 @@ export default function MoviePage({navigation}) {
   return (
     <View>
         
-        <Text>Movie Page 1 - här ska en film visas</Text>
+        <Text>Sökträffar</Text>
         <Button
         title="Open movie page 2"
         onPress={() => navigation.navigate('Movie-page2')}
