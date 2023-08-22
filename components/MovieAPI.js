@@ -2,13 +2,13 @@ import React from 'react'
 
 
 import { useState, useEffect } from 'react'
-import { View, Text, FlatList, StyleSheet, Image,Button } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Image,Button, TextInput } from 'react-native';
 import KnappComp from './KnappComp';
 
 export default function MovieAPI({navigation}) {
 
     
-
+        const [searchName, setSearchName]= useState("");
         const [movieItems, setmovieItems] = useState(""); // hook för movie
         const [movieResponse, setmovieResponse] = useState("")  // hook för bil API
         const [error, setError] = useState('');   // hook för error
@@ -17,7 +17,7 @@ export default function MovieAPI({navigation}) {
         try {
       
           const response =  await fetch(
-            `https://www.omdbapi.com/?apikey=21adb06f&s=batman`
+            `https://www.omdbapi.com/?apikey=21adb06f&s=${searchName}`
           );
          const movieApi= await response.json();
          
@@ -34,7 +34,16 @@ export default function MovieAPI({navigation}) {
       }, []);
   return (
     <View >
-        <Text>Movie API</Text>
+        <Text>Sök här...</Text>
+        <TextInput 
+          value={searchName}
+          style={styles.input} 
+          placeholder="batman"      
+          onChangeText={(value) => setSearchName(value)}    
+        />
+         <Button
+      title="Sök artiklar"
+     onPress={() => getMovies()}/>
         <FlatList  
         data={movieResponse}
         keyExtractor={item => item.imdbID}
@@ -52,6 +61,12 @@ const styles = StyleSheet.create({
       backgroundColor: '#fdeca6',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    input: {
+        borderWidth: 1,
+        borderColor: 'black',
+        padding: 10,
+        marginVertical: 10,
     },
   });
 
